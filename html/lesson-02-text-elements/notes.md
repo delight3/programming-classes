@@ -1,5 +1,27 @@
 # Lesson 02 Notes: HTML Text Elements
 
+# Lesson Goals
+
+By the end of this lesson, students will be able to:
+
+Understand the purpose of HTML text elements
+
+Use headings correctly to structure a web page
+
+Create and format text using paragraphs, line breaks, and formatting tags
+
+Apply text emphasis and formatting elements appropriately
+
+Display code, keyboard input, and preformatted text
+
+Organize content using lists (ordered, unordered, and description lists)
+
+Add links and media (images, audio, and video) to a web page
+
+Differentiate between semantic and non-semantic HTML elements
+
+Write clean, readable, and accessible HTML text content
+
 ## Introduction
 HTML text elements are used to display and organize text content on a web page. These elements help structure information, improve readability, and make web pages accessible to users and search engines.
 

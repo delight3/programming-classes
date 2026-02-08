@@ -17,13 +17,7 @@ After completing this lesson, you should be able to:
 - Apply semantic text elements for accessibility
 
 ## Topics Covered
-- HTML tags
-   1. Text Formatting Tags
-   2. Links & Media Tags
-   3. List Tags
-   4. Table Tags
-   5. Form Tags
-   6. Semantic Tags  
+HTML tags
 
 ### 1. Headings
 HTML provides six levels of headings used to define content hierarchy:
@@ -104,5 +98,5 @@ Create a simple web page that includes:
 lesson-02-text-elements/
 ├── README.md
 ├── notes.md
-├── examples.html
+├── tags.html
 └── assignment.md

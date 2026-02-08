@@ -10,7 +10,6 @@ It does not add logic or styling.
 
 
 ## Example Used in Class
-html
 
 <!DOCTYPE html>
 <html>
