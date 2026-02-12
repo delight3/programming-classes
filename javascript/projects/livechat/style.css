@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #0a2a66, #0f4c81);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbox {
+  width: 360px;
+  height: 500px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topholder {
+  background: #0a2a66;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.chatarea {
+  flex: 1;
+  background: #f4f6f8;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.customer, .care {
+  max-width: 75%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.customer {
+  background: #0f4c81;
+  color: #fff;
+  margin-left: auto;
+}
+
+.care {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.time {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 3px;
+}
+
+.typing {
+  font-style: italic;
+  font-size: 12px;
+  color: #666;
+  margin: 5px;
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+.input-area button {
+  padding: 12px 15px;
+  border: none;
+  background: #0a2a66;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background: #08315c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
