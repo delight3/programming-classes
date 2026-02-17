@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <h2>&#128202; Admin Dashboard</h2>
+
+      <div class="controls">
+        <select id="monthFilter" onchange="filterData()" title="month">
+          <option value="all">All Months</option>
+          <option value="Jan">January</option>
+          <option value="Feb">February</option>
+          <option value="Mar">March</option>
+        </select>
+
+        <select onchange="sortData(this.value)" title="date">
+          <option value="asc">Sort: Ascending</option>
+          <option value="desc">Sort: Descending</option>
+        </select>
+      </div>
+
+      <div class="cards">
+        <div class="card">&#128176; Sales<br /><span id="salesTotal">0</span></div>
+        <div class="card">&#128101; Users<br /><span id="usersTotal">0</span></div>
+        <div class="card">&#128200; Growth<br /><span id="growth">0%</span></div>
+      </div>
+
+      <div class="charts">
+        <canvas id="salesChart"></canvas>
+        <canvas id="usersChart"></canvas>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
