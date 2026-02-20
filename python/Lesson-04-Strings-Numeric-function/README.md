@@ -18,7 +18,7 @@ By the end of this lesson, students should be able to:
 
 Lesson Contents
 - notes.md": Detailed explanations of strings and numeric functions
-- examples.py: Practical coding examples
+- py_string.py: Practical coding examples
 - assignment.md: Practice tasks for students
 
 Start with notes.md to begin the lesson.
