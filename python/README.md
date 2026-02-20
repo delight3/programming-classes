@@ -18,6 +18,8 @@ Each lesson is organized in its own folder and includes:
 
 Lessons
 - Lesson 01: Introduction to Python
+- Lesson 02 Notes: Variables & Data Types
+- Lesson 03 Notes: Operators & User Input
 
 More lessons will be added progressively.
 

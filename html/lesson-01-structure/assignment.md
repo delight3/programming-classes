@@ -1,6 +1,6 @@
-# Assignment – HTML Structure Practice
+Assignment – HTML Structure Practice
 
-## Task
+Task
 Create a basic HTML page that includes:
 
 1. A valid HTML document structure
@@ -10,11 +10,11 @@ Create a basic HTML page that includes:
    - Two paragraphs
 
 
-## Instructions
-- Create or modify `index.html`
+Instructions
+- Create or modify index.html
 - Use proper indentation
 - Open the file in a browser to test
 
 
-## Submission
-Students should submit their `index.html` file after completion.
+Submission
+Students should submit their index.html file after completion.

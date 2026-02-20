@@ -1,15 +1,15 @@
-# Instructor Notes – HTML Document Structure
+Instructor Notes – HTML Document Structure
 
-## Lesson Goal
+Lesson Goal
 Help students understand how HTML pages are structured.
 
 
-## Key Explanation
+Key Explanation
 HTML defines the structure of web pages.
 It does not add logic or styling.
 
 
-## Example Used in Class
+Example Used in Class
 
 <!DOCTYPE html>
 <html>

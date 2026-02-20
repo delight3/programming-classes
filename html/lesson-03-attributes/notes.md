@@ -1,14 +1,14 @@
-# HTML Attributes
+HTML Attributes
 
-## What is an HTML Attribute?
-An HTML attribute provides **additional information** about an HTML element.
-Attributes are always written in the **opening tag** and usually come in
+What is an HTML Attribute?
+An HTML attribute provides additional information about an HTML element.
+Attributes are always written in the opening tag and usually come in
 name/value pairs.
 
-### Syntax
+Syntax
 <tagname attribute="value">Content</tagname>
 
-## Common HTML Attributes
+Common HTML Attributes
 
 1. id
 Uniquely identifies an element.
