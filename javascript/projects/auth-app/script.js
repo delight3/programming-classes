@@ -1,4 +1,4 @@
-// Fake JWT generator (for demo)
+// Fake JWT generator
 function generateJWT(user) {
   const header = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }));
   const payload = btoa(JSON.stringify({

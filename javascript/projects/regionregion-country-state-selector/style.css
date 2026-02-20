@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== MAIN WIDGET ===== */
+#widget {
+  background: linear-gradient(135deg, #2b2b2b, #1f1f1f);
+  padding: 25px;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.15);
+  border: 1px solid #00ff00;
+}
+
+/* ===== FORM ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ===== SELECT DROPDOWNS ===== */
+select {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+select:hover:not(:disabled) {
+  border-color: #00ff00;
+}
+
+select:focus {
+  border-color: #00ff00;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+}
+
+/* ===== OPTION HIGHLIGHT ===== */
+option:checked {
+  background-color: #00ff00;
+  color: #000000;
+}
+
+/* ===== OUTPUT TEXT ===== */
+#txtregion,
+#txtplacename {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-left: 4px solid #00ff00;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #ffffff;
+}

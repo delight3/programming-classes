@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Region Selector</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div id="widget">
+      <form>
+        <label for="region">Choose Region</label>
+        <select
+          id="region"
+          name="region"
+          onchange="set_country(this, country, city_state)"
+        >
+          <option value="" selected>Select Region</option>
+          <script type="text/javascript">
+            setRegions(this);
+          </script>
+        </select>
+
+        <label for="country">Choose Country</label>
+        <select
+          id="country"
+          name="country"
+          disabled
+          onchange="set_city_state(this, city_state)"
+        ></select>
+
+        <label for="city_state">State</label>
+        <select
+          id="city_state"
+          name="city_state"
+          disabled
+          onchange="print_city_state(country, this)"
+        ></select>
+      </form>
+
+      <div id="txtregion"></div>
+      <div id="txtplacename"></div>
+    </div>
+  </body>
+</html>
