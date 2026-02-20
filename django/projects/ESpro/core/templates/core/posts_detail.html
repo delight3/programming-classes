@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %} 
+{% block content %}
+<div>
+  <a href="#">{{ object.author }}</a>
+  <small>{{ object.date_posted|date:"F d, Y" }}</small>
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.content }}</p>
+</div>
+
+{% endblock content %}

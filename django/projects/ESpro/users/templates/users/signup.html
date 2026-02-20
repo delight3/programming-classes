@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<body>
+    <div class="w-25 m-auto p-2 bg-light">
+        <h3 class="text-info">Sign Up</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                {{form.username}}
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                {{form.email}}
+            </div>
+            <div class="form-group">
+                <label for="password1">Password</label>
+                {{form.password1}}
+            </div>
+            <div class="form-group">
+                <label for="password2">Re-enter Password</label>
+                {{form.password2}}
+            </div>
+
+            {% if form.errors or form.no_field_errors %}
+            <div class="bg-danger text-white mt-3 rounded">
+                {% for field in form %} {{ field.errors }} {% endfor %}
+                {{form.non_field_errors}}
+            </div>
+            {% endif %}
+
+            <div class="form-group">
+                <button class="btn btn-info">Submit</button>
+            </div>
+            <div class="border-top pt-3"></div>
+            <small class="text-muted">Already An Account?
+                <a class="ml-2" href="{% url 'signin' %}">Sign In</a>
+            </small>
+        </form>
+    </div>
+
+{% endblock content %}
+   

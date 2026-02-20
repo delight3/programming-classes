@@ -1,0 +1,8 @@
+{% extends 'base.html'%} 
+{% block content %}
+<div>
+  <h1>{{user.fname}} {{user.lname}}</h1>
+  <p>Phone: {{user.phone}}</p>
+  <p>Registered on: {{user.joined_date}}</p>
+</div>
+{% endblock content %}

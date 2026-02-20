@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %} {% block content %}
+<div>
+  <h1>{{user.username}}</h1>
+</div>
+<div class="w-50 p-5">
+  <img
+    src="{{ user.profile.image.url }}"
+    alt="Profile image"
+    class="rounded-circle account-img"
+  />
+  <div class="media-body">
+    <h2>{{ user.username }}</h2>
+    <p>{{user.email }}</p>
+  </div>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h3 class="border-bottom mb-3">Profile Info</h3>
+    <div class="form-group">
+      <label for="username">Username</label>
+      {{u_form.username}}
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      {{u_form.email}}
+    </div>
+    <div class="form-group">
+      {{ p_form }}
+    </div>
+    <div class="form-group">
+      <button class="btn btn-info">Update</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}

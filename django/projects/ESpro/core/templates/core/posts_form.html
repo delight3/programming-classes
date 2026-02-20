@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %} {% block content %}
+<body>
+  <div class="w-25 m-auto p-2 bg-light">
+    <form action="" method="post">
+      {% csrf_token %}
+      <fieldset>
+        <legend>Add Post</legend>
+        {{ form }}
+      </fieldset>
+
+      <div class="form-group">
+        <button class="btn btn-info">Post</button>
+      </div>
+    </form>
+  </div>
+
+  {% endblock content %}
+</body>
