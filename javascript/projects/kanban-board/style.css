@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  text-align: center;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.column {
+  background: #e2e4e6;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.task-list {
+  min-height: 200px;
+  padding: 5px;
+}
+
+.task {
+  background: white;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  cursor: grab;
+}
+
+button {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  background: #0079bf;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

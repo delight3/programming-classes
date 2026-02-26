@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Kanban Board</h2>
+
+    <div class="board">
+      <div class="column" data-status="todo">
+        <h3>To Do</h3>
+        <div class="task-list" id="todo"></div>
+        <button onclick="addTask('todo')">+ Add</button>
+      </div>
+
+      <div class="column" data-status="progress">
+        <h3>In Progress</h3>
+        <div class="task-list" id="progress"></div>
+        <button onclick="addTask('progress')">+ Add</button>
+      </div>
+
+      <div class="column" data-status="done">
+        <h3>Done</h3>
+        <div class="task-list" id="done"></div>
+        <button onclick="addTask('done')">+ Add</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
