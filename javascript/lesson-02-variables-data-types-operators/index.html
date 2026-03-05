@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basics</title>
+  </head>
+  <body>
+    <canvas
+      id="gameCanvas"
+      width="500"
+      height="400"
+      style="border: 1px solid black"
+    ></canvas>
+    <script>
+      //Variables
+      let name = "John";
+      let age = 20;
+      let language = "JavaScript";
+
+      console.log(name);
+      console.log(age);
+      console.log(language);
+  
+
+      //setinterval
+      setInterval(function () {
+        console.log("Running...");
+      }, 1000);
+
+      
+      
+      //Animation
+      const canvas = document.getElementById("gameCanvas");
+      const ctx = canvas.getContext("2d");
+
+      let x = 50; // ball X position
+      let y = 50; // ball Y position
+      let dx = 2; // speed in X direction
+      let dy = 2; // speed in Y direction
+      let radius = 20;
+
+      function animateBall() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // clear screen
+
+        // Draw ball
+        ctx.beginPath(); //Start a new drawing path
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        // Move ball
+        x += dx; //moves right or left
+        y += dy; // moves up or down
+
+        // Bounce off walls
+        if (x + radius > canvas.width || x - radius < 0) {
+          dx = -dx;
+        }
+
+        if (y + radius > canvas.height || y - radius < 0) {
+          dy = -dy;
+        }
+
+        requestAnimationFrame(animateBall);
+      }
+
+      animateBall();
+    </script>
+  </body>
+</html>
