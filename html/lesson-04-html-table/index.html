@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f1f1f1;
+      }
+
+      /* Header */
+      .header {
+        padding: 30px;
+        text-align: center;
+        background: white;
+      }
+
+      .header h1 {
+        font-size: 40px;
+      }
+
+      /* Layout */
+      .container {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      /* Main content */
+      .main {
+        flex: 70%;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        flex: 30%;
+      }
+
+      /* Cards */
+      .card {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow:
+          0 4px 10px 0 rgba(0, 0, 0, 0.2),
+          0 4px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      /* Fake images */
+      .img-box {
+        background: #ccc;
+        height: 200px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-text-heading {
+        margin-bottom: 30px;
+      }
+      .card-text-heading h3 {
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+      .card-text-heading h5 {
+        font-weight: 400;
+        font-size: 18px;
+      }
+      .card-text-heading h5 span {
+        opacity: 0.6;
+      }
+      .card-text-content {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: justify;
+      }
+      .card-button {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .text-button-left button {
+        border: 1px solid lightgray;
+        background-color: #fff;
+        padding: 15px;
+        text-align: center;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .text-button-left button:hover {
+        background-color: lightgray;
+      }
+      .text-button-right {
+        padding-top: 15px;
+      }
+      .text-button-right span {
+        background-color: #000;
+        color: #fff;
+        padding: 3px 8px;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+      .name {
+        margin-bottom: 20px;
+      }
+      .name h3 {
+        font-size: 20px;
+      }
+      .text-content {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .img-box.small {
+        height: 70px;
+      }
+      /*post*/
+      .post-heading {
+        background-color: #f1f1f1;
+        padding: 25px;
+      }
+      .post {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid lightgray;
+      }
+      .post:hover {
+        background-color: lightgray;
+      }
+      .post img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin: 15px;
+      }
+      .post-title {
+        padding-bottom: 5px;
+      }
+      .tags-container {
+        background-color: #fff;
+        width: 100%;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 13px;
+      }
+      .tags .active {
+        background-color: #000;
+        color: #fff;
+        font-size: 15px;
+      }
+      .tags span {
+        background-color: #eee;
+        padding: 3px 6px;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      /* main-container end */
+      /* footer start */
+      footer {
+        height: 150px;
+        background-color: #616161;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      .text-button {
+        padding: 20px 0px;
+      }
+      .text-button button {
+        color: #fff;
+        background-color: black;
+        padding: 12px 24px;
+        text-align: center;
+        border: none;
+        font-size: 15px;
+      }
+      .btn-next {
+        cursor: pointer;
+      }
+      .btn-next:hover {
+        background-color: white;
+        color: black;
+      }
+      .btn-pre {
+        opacity: 0.3;
+        cursor: not-allowed;
+        background: #00000080;
+      }
+      .btn-pre:hover {
+        background-color: rgba(0, 0, 0, 0.19);
+        color: black;
+        
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+      } 
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1>My Blog</h1>
+      <p>Welcome to my blog</p>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+      <!-- Blog Posts -->
+      <div class="main">
+        <div class="card">
+          <div class="img-box">
+            <img src="https://www.w3schools.com/w3images/woods.jpg" alt="" />
+          </div>
+          <div class="card-text-heading">
+            <h3>TITLE HEADING</h3>
+            <h5>Title description, <span>October 22, 2025</span></h5>
+          </div>
+          <p class="card-text-content">
+            Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl.
+            Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna
+            enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non
+            congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed
+            vitae justo condimentum, porta lectus vitae, ultricies congue
+            gravida diam non fringilla.
+          </p>
+          <div class="card-button">
+            <div class="text-button-left">
+              <button><b>READ MORE &raquo;</b></button>
+            </div>
+            <div class="text-button-right"><b>Comments</b><span>0</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>BLOG ENTRY</h2>
+          <h5>Title description, April 25, 2026</h5>
+          <div class="img-box">
+            <img src="https://www.w3schools.com/w3images/woods.jpg" alt="" />
+          </div>
+          <p>Some text...</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="card">
+          <div class="img-box">
+            <img
+              src="https://www.w3schools.com/w3images/avatar_g.jpg "
+              alt=""
+            />
+          </div>
+          <div class="card-text-heading name">
+            <h3>My Name</h3>
+          </div>
+          <p class="text-content">
+            Just me, myself and I, exploring the universe of uknownment. I have
+            a heart of love and a interest of lorem ipsum and mauris neque quam
+            blog. I want to share my world with you.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="popular-posts">
+            <div class="post-heading">
+              <h4>Popular Posts</h4>
+            </div>
+            <div class="post">
+              <img src="card-img/p1.jpg" alt="Image" />
+              <div>
+                <div class="post-title">Lorem</div>
+                <div class="post-subtitle">Sed mattis nunc</div>
+              </div>
+            </div>
+            <div class="post">
+              <img src="card-img/p2.jpg" alt="Image" />
+              <div>
+                <div class="post-title">ipsum</div>
+                <div class="post-subtitle">Praes tinci sed</div>
+              </div>
+            </div>
+            <div class="post">
+              <img src="card-img/p3.jpg" alt="" />
+              <div>
+                <div class="post-title">Dorum</div>
+                <div class="post-subtitle">Ultricies congue</div>
+              </div>
+            </div>
+            <div class="post">
+              <img src="card-img/p4.jpg" alt="" />
+              <div>
+                <div class="post-title">Mingsum</div>
+                <div class="post-subtitle">Lorem ipsum dipsum</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tags-container">
+          <div class="popular-posts">
+            <div class="post-heading">
+              <h4>Tags</h4>
+            </div>
+            <div class="tags">
+              <span class="active">Travel</span>
+              <span> New York</span>
+              <span>London</span>
+              <span>IKEA</span>
+              <span>NORWAY</span>
+              <span>DIY</span>
+              <span>Ideas</span>
+              <span>Baby</span>
+              <span>Family</span>
+              <span>News</span>
+              <span>Clothing</span>
+              <span>Shopping</span>
+              <span>Sports</span>
+              <span>Games</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
